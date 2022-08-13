@@ -1,11 +1,18 @@
-import { Post } from "./components/Post";
+import { Post, Author, Content } from "./components/Post";
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 
 import "./global.scss";
 import styles from "./App.module.scss";
 
-const posts = [
+interface PostListProps {
+  id: number;
+  author: Author;
+  content: Content[];
+  publishedAt: Date;
+}
+
+const posts: PostListProps[] = [
   {
     id: 1,
     author: {
@@ -66,3 +73,4 @@ export function App() {
     </div>
   );
 }
+// 00:18:00
